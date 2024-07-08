@@ -116,8 +116,7 @@ console.log('Exercise 2 Correct Result: ',
 let sortedByBirthYear = []
 
 // Enter your solution code here:
-
-
+sortedByBirthYear = inventors.sort((oldestYear, earliestYear) => oldestYear.year - earliestYear.year);
 
 // Check your return value:
 console.log('Exercise 3 My Result: ', sortedByBirthYear)
@@ -151,7 +150,7 @@ let inventorNamedAda = {}
 
 // Enter you solution code here:
 
-
+inventorNamedAda = inventors.find((inventor) => {return inventor.first === "Ada"});
 
 // Check your return value:
 console.log('Exercise 4 My Result: ', inventorNamedAda)
