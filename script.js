@@ -57,7 +57,7 @@ let veryOldInventors = []
 
 // Enter your solution code here:
 
-veryOldInventors = inventors.filter((inventor) => inventor.year>1499 && inventor.year<1600);
+veryOldInventors = inventors.filter((yearBorn) => yearBorn.year >= 1500 && yearBorn.year >= 1599);
 
 // Check your return value:
 console.log('Exercise 1 My Result: ', veryOldInventors)
@@ -169,6 +169,10 @@ let firstLast = []
 
 // Enter your solution code here:
 
+firstLast= people.map((inventor) => {
+    const mergedNames = inventor.split(',');
+    return `${mergedNames[1]} ${mergedNames[0]}`;
+});
 
 
 // Check your return value:
@@ -232,7 +236,9 @@ let isAdultPresent = null
 
 // Enter your solution code here:
 
-
+isAdultPresent = devs.some((yearOfBirth) => {
+    return (2024 - yearOfBirth.year) >=18;
+});
 
 // Check your return value:
 console.log('Exercise 6 My Result: ', isAdultPresent)
@@ -254,6 +260,10 @@ let isEveryone19OrOlder = null
 // Enter your solution code here:
 
 
+isEveryone19OrOlder = devs.every((yearOfBirth) => {
+    return (2024 - yearOfBirth.year) >= 19;
+});
+
 
 // Check your return value:
 console.log('Exercise 7 My Result: ', isEveryone19OrOlder)
@@ -271,7 +281,9 @@ let commentById = {}
 
 // Enter your solution code here:
 
-
+commentById = comments.find((comment) => {
+    return (comment.id ===  823423);
+})
 
 // Check your return value:
 console.log('Exercise 8 My Result: ', commentById)
@@ -288,6 +300,9 @@ let idx = null
 
 // Enter your solution code here:
 
+idx = comments.findIndex((comment) => {
+    return(comment.id === 123523);
+})
 
 
 // Check your return value:
