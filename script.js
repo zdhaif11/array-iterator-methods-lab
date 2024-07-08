@@ -57,7 +57,7 @@ let veryOldInventors = []
 
 // Enter your solution code here:
 
-veryOldInventors = inventors.filter((yearBorn) => yearBorn.year >= 1500 && yearBorn.year >= 1599);
+veryOldInventors = inventors.filter((yearBorn) => yearBorn.year >= 1500 && yearBorn.year <= 1599);
 
 // Check your return value:
 console.log('Exercise 1 My Result: ', veryOldInventors)
